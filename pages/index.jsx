@@ -118,50 +118,45 @@ export default function Home() {
   }
 
   function gameResult(person, cpu) {
-    var winAudio = new Audio("/sounds/win.mp3");
-    var looseAudio = new Audio("/sounds/loose.mp3");
+    //var winAudio = new Audio("/sounds/win.mp3");
+    //var looseAudio = new Audio("/sounds/loose.mp3");
+
+    function won (){
+      setTimeout(function () {
+        alert("You Won !!");
+      }, 500);
+    }
+
+    function lost (){
+      setTimeout(function () {
+        alert("You Lost !!");
+      }, 500);
+    }
+
     setTimeout(function () {
       if (person != cpu) {
         if (person == "Rock") {
           if (cpu == "Scissors") {
-            winAudio.play();
-            setTimeout(function () {
-              alert("You Win !!");
-            }, 500);
+            won();
           }
           if (cpu == "Paper") {
-            looseAudio.play();
-            setTimeout(function () {
-              alert("You Lost !!");
-            }, 500);
+            lost();
           }
         }
         if (person == "Paper") {
           if (cpu == "Scissors") {
-            looseAudio.play();
-            setTimeout(function () {
-              alert("You Lost !!");
-            }, 500);
+            lost();
           }
           if (cpu == "Rock") {
-            winAudio.play();
-            setTimeout(function () {
-              alert("You Win !!");
-            }, 500);
+            won();
           }
         }
         if (person == "Scissors") {
           if (cpu == "Paper") {
-            winAudio.play();
-            setTimeout(function () {
-              alert("You Win !!");
-            }, 500);
+            won();
           }
           if (cpu == "Rock") {
-            looseAudio.play();
-            setTimeout(function () {
-              alert("You Lost  !!");
-            }, 500);
+            lost();
           }
         }
       } else {
