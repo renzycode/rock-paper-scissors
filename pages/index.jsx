@@ -132,7 +132,7 @@ export default function Home() {
           if (cpu == "Paper") {
             looseAudio.play();
             setTimeout(function () {
-              alert("You Loose !!");
+              alert("You Lost !!");
             }, 500);
           }
         }
@@ -140,7 +140,7 @@ export default function Home() {
           if (cpu == "Scissors") {
             looseAudio.play();
             setTimeout(function () {
-              alert("You Loose !!");
+              alert("You Lost !!");
             }, 500);
           }
           if (cpu == "Rock") {
@@ -160,7 +160,7 @@ export default function Home() {
           if (cpu == "Rock") {
             looseAudio.play();
             setTimeout(function () {
-              alert("You Loose !!");
+              alert("You Lost  !!");
             }, 500);
           }
         }
